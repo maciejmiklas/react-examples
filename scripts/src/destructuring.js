@@ -19,6 +19,6 @@ const pros = {pr1: "val 1", pr2: "val 2"};
 console.log(pros);
 
 const {pr1, pr2} = pros;
-console.log(pr1, " - ", pr2);
+console.log(`${pr1}  - ${pr2}`);
 
 
