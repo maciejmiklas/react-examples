@@ -14,10 +14,12 @@
     "webpack-cli": "latest",
     "babel-core": "latest",
     "babel-loader": "latest",
+    "style-loader": "latest",
     "babel-preset-env": "latest",
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
-    "prop-types": "latest"
+    "prop-types": "latest",
+    "uuid": "latest"
   },
   "scripts": {
     "build": "webpack --mode development",

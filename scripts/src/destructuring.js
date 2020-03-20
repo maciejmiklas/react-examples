@@ -12,9 +12,12 @@ var z = {
     bar: {h: "hello", l: "lo"},
     foo: "Good bye"
 };
+console.log("##################A###################");
 x(y);
+console.log("##################B###################");
+x("aaa", "bbbb");
 
-console.log("#####################################");
+console.log("###################C##################");
 const pros = {pr1: "val 1", pr2: "val 2"};
 console.log(pros);
 

@@ -1,7 +1,6 @@
-import React from "react";
-import {Component} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 
-// https://reactjs.org/docs/refs-and-the-dom.html#callback-refs
 class AddColorForm extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +10,7 @@ class AddColorForm extends Component {
     submit(e) {
         const {_title, _color} = this.refs;
         e.preventDefault();
-        alert(`New color: ${_title.value} ${_color.value}`)
+        this.props.onNewColor(_title.value, _color.value);
         _title.value = '';
         _color.value = "#000000";
         _title.focus();
@@ -28,5 +27,14 @@ class AddColorForm extends Component {
         )
     }
 }
+
+AddColorForm.propTypes = {
+    onNewColor: PropTypes.func
+};
+
+AddColorForm.defaultProps = {
+    onNewColor: f => f
+};
+
 
 export default AddColorForm;
