@@ -1,28 +1,8 @@
 import React, {Component} from "react";
 import AddColorForm from "./AddColorForm";
 import {v4} from 'uuid'
-import StarRating from "./StarRating";
-
-const Color = ({title, color, rating = 0, onRemove = f => f, onRate = f => f}) => {
-    return (
-        <section className="color">
-            <button onClick={onRemove}>X</button>
-            <h1>{title}</h1>
-            <div className="color" style={{backgroundColor: color}}>{rating}</div>
-            <div>
-                <StarRating starsSelected={rating} onRate={onRate}/>
-            </div>
-        </section>)
-};
-
-const ColorList = ({colors = [], onRemove = f => f, onRate = f => f}) =>
-    <div className="colors-list">
-        {(colors.length === 0) ?
-            <p>No Colors Listed. (Add a Color)</p> :
-            colors.map(color =>
-                <Color key={color.id} {...color} onRate={(rating) => onRate(color.id, rating)}
-                       onRemove={() => onRemove(color.id)}/>)}
-    </div>;
+import './css/App.scss'
+import ColorList from "./ColorList";
 
 class App extends Component {
     constructor(props) {
@@ -57,7 +37,6 @@ class App extends Component {
             }
         ];
         this.setState({colors})
-        console.log(JSON.stringify(this.state));
     }
 
     render() {

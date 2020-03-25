@@ -10,8 +10,20 @@ module.exports = {
             loader: ['babel-loader']
         }, {
             test: /\.css$/,
-            exclude: /(node_modules)/,
-            loader: ['style-loader', 'css-loader']
+            use: ['style-loader', 'css-loader', {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: () => [require('autoprefixer')]
+                }
+            }]
+        }, {
+            test: /\.scss/,
+            use: ['style-loader', 'css-loader', {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: () => [require('autoprefixer')]
+                }
+            }, 'sass-loader']
         }]
     }
 };

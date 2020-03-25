@@ -19,7 +19,8 @@
     "babel-preset-react": "latest",
     "babel-preset-stage-0": "latest",
     "prop-types": "latest",
-    "uuid": "latest"
+    "uuid": "latest",
+    "node-sass": "latest"
   },
   "scripts": {
     "build": "webpack --mode development",
