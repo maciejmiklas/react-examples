@@ -21,6 +21,15 @@ var inputs = ["a", "b", "c", "d", "e", "f"];
 console.log("#A###############");
 myFunc(...inputs);
 
+console.log("#A1###############");
+myFunc({...inputs});
+
+console.log("#A2###############");
+myFunc([...inputs]);
+
+console.log("#A3###############");
+myFunc(...[...inputs]);
+
 console.log("#B###############");
 myFunc(inputs);
 
