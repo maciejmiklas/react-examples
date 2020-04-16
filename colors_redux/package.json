@@ -20,7 +20,10 @@
     "babel-preset-stage-0": "latest",
     "prop-types": "latest",
     "uuid": "latest",
-    "node-sass": "latest"
+    "node-sass": "latest",
+    "redux": "latest",
+    "react-redux": "latest",
+    "react-icon": "latest"
   },
   "scripts": {
     "build": "webpack --mode development",

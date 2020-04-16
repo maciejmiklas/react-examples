@@ -1,7 +1,10 @@
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        index: "./src/index.js",
+        test: "./src/test.js",
+    },
     output: {
-        filename: "bundle.js"
+        filename: '[name].js',
     },
     module: {
         rules: [{
