@@ -17,6 +17,9 @@ x(y);
 console.log("##################B###################");
 x("aaa", "bbbb");
 
+console.log("##################B1###################");
+x({bar: "aaa", foo: "bbbb"});
+
 console.log("###################C##################");
 const pros = {pr1: "val 1", pr2: "val 2"};
 console.log(pros);

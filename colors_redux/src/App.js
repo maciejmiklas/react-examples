@@ -14,7 +14,7 @@ const NewColor = connect(
     }))(AddColorForm)
 
 
-const Colors = connect(
+let connectColors = connect(
     state => ({colors: [...state.colors]}),
     dispatch => ({
         onRemove(id) {
@@ -26,7 +26,8 @@ const Colors = connect(
             dispatch(rateColor(id, rating))
         }
     })
-)(ColorList)
+);
+const Colors = connectColors(ColorList)
 
 class App extends Component {
     render() {
